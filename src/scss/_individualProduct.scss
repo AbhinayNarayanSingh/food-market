@@ -1,0 +1,129 @@
+.IndividualProduct {
+    position: relative;
+    background-color: #FFC700;
+
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 70vh;
+    }
+
+
+    @media screen and (max-width:440px) {
+        width: 100vw;
+    }
+
+    .product-detail {
+        // margin-top: -2rem;
+        background-color: white;
+        z-index: 10;
+
+        position: absolute;
+        top: 60vh;
+        border-radius: 2rem 2rem 0 0;
+        padding: 1.5rem 1rem .5rem;
+
+        h2 {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #020202;
+        }
+
+        p {
+            padding-top: .5rem;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #8D92A3;
+        }
+
+        .review {
+            display: flex;
+            padding: .25rem 0;
+
+            i {
+                color: #FFC700;
+            }
+
+            h3 {
+                padding: 0 .5rem;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #8D92A3;
+            }
+        }
+
+        .ingredients {
+            padding-top: 1rem;
+
+            h2 {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                color: #020202;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: #8D92A3;
+            }
+
+        }
+
+        .action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0 1rem;
+
+            div {
+                h4 {
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #8D92A3;
+                }
+
+                h3 {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #020202;
+
+                }
+            }
+
+            button {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+                color: #020202;
+
+                width: 163px;
+                height: 45px;
+                background: #FFC700;
+                border-radius: 8px;
+            }
+        }
+    }
+
+
+    @media screen and (min-width:440px) {
+        min-height: 667px;
+
+        img {
+            min-height: 500px;
+        }
+
+        .product-detail {
+            top: 400px;
+        }
+
+    }
+}

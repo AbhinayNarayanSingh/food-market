@@ -1,0 +1,23 @@
+.order-container {
+    .section-nav-menu {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1.25rem;
+        border-bottom: 2px solid whitesmoke;
+
+        button {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+
+            background: transparent;
+            margin-bottom: .75rem;
+            color: #8D92A3;
+
+        }
+
+        button.active {
+            color: #020202;
+        }
+    }
+}
