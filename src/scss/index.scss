@@ -1,8 +1,10 @@
-@import "./_header.scss";
+@import "./common";
 @import "./home";
 @import "./individualProduct";
 @import "./cart";
 @import "./order";
+@import "./sign";
+@import "./profile";
 
 *,
 h1,
@@ -14,60 +16,123 @@ p,
 a,
 input,
 label {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
 
-
-    font-family: 'Poppins', sans-serif;
-    color: rgba($color: #000000, $alpha: .9);
-    font-style: normal;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-}
-
-
-.mobile-view-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: antiquewhite;
-    min-height: 100vh;
-
-    .container {
-
-        background-color: #FAFAFC;
-
-        @media screen and (min-width: 440px) {
-            margin-top: 2rem;
-            width: 375px;
-            min-height: 667px;
-            max-width: 100%;
-        }
-
-        @media screen and (max-width: 440px) {
-            width: 100%;
-            min-height: 100vh;
-        }
-    }
-}
-
-.notification {
-    background-color: #000000;
-
-    p {
-        font-size: 12px;
-        color: white;
-        padding: .5rem 1rem;
-        text-align: center;
-    }
+  font-family: "Poppins", sans-serif;
+  color: rgba($color: #000000, $alpha: 0.9);
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
 }
 
 button,
 a {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  input {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    line-height: 21px;
+    border: 1px solid #020202;
+    border-radius: 8px;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 24px;
+    color: #020202;
+    margin-bottom: 6px;
+  }
+
+  ::placeholder {
+    color: #8d92a3;
+  }
+}
+
+.form-input.error {
+  input {
+    border: 1px solid #d9435e;
+    color: #d9435e;
+  }
+  label {
+    color: #d9435e;
+  }
+  ::placeholder {
+    color: #d9435e;
+  }
+}
+
+button {
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  width: 100%;
+  padding: 12px;
+  color: #020202;
+}
+
+.Alert {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  // max-width: 350px;
+  text-align: center;
+  padding: 0.5rem 0;
+  z-index: 100;
+
+  @media screen and (min-width: 440px) {
+    max-width: 375px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+  &.error {
+    background-color: #d9435e;
+  }
+  &.success {
+    background-color: #1abc9c;
+  }
+}
+
+.mobile-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(207, 207, 207);
+  min-height: 100vh;
+
+  .container {
+    background-color: #fafafc;
+
+    @media screen and (min-width: 440px) {
+      margin-top: 2rem;
+      width: 375px;
+      min-height: 667px;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 440px) {
+      width: 100%;
+      min-height: 100vh;
+    }
+  }
 }
